@@ -1,5 +1,6 @@
 package metodos;
 
+
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -17,11 +18,11 @@ public class Metodos extends DriversFactory {
 		driver.findElement(elemento).sendKeys(texto);
 
 	}
-
-	public void clicar(By fromEmployeer, String elemento) {
-		driver.findElement(fromEmployeer).click();;
-	    
+	public void clicar(By FromEmployeer, String texto) {
+		driver.findElement(FromEmployeer).click();
+	
 	}
+	
 
 	public void validarTexto(By elemento, String textoEsperado) {
 		String textoCapturado = driver.findElement(elemento).getText();
@@ -29,4 +30,17 @@ public class Metodos extends DriversFactory {
 
 	}
 
+	public void pausa(int tempo) throws InterruptedException {
+		Thread.sleep(tempo);
+	}
+	
+	
+	public void fecharNavegador(String texto) {
+		driver.quit();
+		
+	}
+
+	
+
 }
+

@@ -1,7 +1,10 @@
 package steps;
 
+
+
+
+
 import elementos.Elementos;
-import io.cucumber.java.Before;
 import io.cucumber.java.it.Quando;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
@@ -14,13 +17,21 @@ public class AddCustomer {
 	Metodos metodos = new Metodos();
 	Elementos el = new Elementos();
 	
-	@Before
-	public void iniciarTeste() {
+	
+	
+	//@After
+	//public void finalizarTeste() {
+		//Executa.fecharNavegador();
+	//}
+	
+	@Dado("que eu acesso o site")
+	public void queEuAcessoOSite() {
 		Executa.abrirNavegador();
 	}
 	
-	@Dado("que selecione o bootstrap v4")
-	public void queSelecioneOBootstrapV4() {
+	
+	@E("selecione o bootstrap v4")
+	public void selecioneOBootstrapV4() {
 		metodos.clicar(el.version);
 	}
 
@@ -42,6 +53,7 @@ public class AddCustomer {
 	    metodos.escrever(el.State, "RS");
 	    metodos.escrever(el.PostalCode, "91000-000");
 	    metodos.escrever(el.Country, "Brasil");
+	    metodos.clicar(el.FromEmployeer);
 	    metodos.clicar(el.fromEmployeer, "Fixter");
 	    metodos.escrever(el.CreditLimit, "200");
 	
@@ -54,8 +66,11 @@ public class AddCustomer {
 	}
 
 	@Entao("validamos a mensagem")
-	public void validamosAMensagem() {
-		metodos.validarTexto(el.reportSucess, "Your data has been successfully stored into the database. Edit Customer or Go back to list");
+	public void validamosAMensagem() throws InterruptedException {
+		metodos.pausa(3000);
+		metodos.validarTexto(el.reportSucess, "Your data has been successfully stored into the database.");
+	
+	    metodos.fecharNavegador("Encerrando o teste");
 	}
 
 }

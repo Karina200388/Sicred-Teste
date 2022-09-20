@@ -6,7 +6,8 @@ Funcionalidade: Adicionar usuario
 
   @adicionar
   Cenario: Adicionar um usuario
-    Dado que selecione o bootstrap v4
+    Dado que eu acesso o site
+    E selecione o bootstrap v4
     E clico em adicionar cliente
     E preencho os dados
     Quando clicar em salvar 

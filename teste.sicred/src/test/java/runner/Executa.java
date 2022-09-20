@@ -1,5 +1,6 @@
 package runner;
 
+
 import org.junit.runner.RunWith;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -33,6 +34,10 @@ public class Executa extends DriversFactory{
  		 driver.manage().window().maximize();
      }
 
+	
 
+ }
+  
+     
+     
 
-}
