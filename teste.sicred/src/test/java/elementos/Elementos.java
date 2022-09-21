@@ -22,5 +22,5 @@ public class Elementos {
 	public By save = By.xpath("//button[@class='btn btn-secondary btn-success b10']");
 	public By reportSucess = By.xpath("//div[@id='report-success']/p");
 
-}
 
+}

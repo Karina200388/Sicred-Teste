@@ -1,9 +1,5 @@
 package steps;
 
-
-
-
-
 import elementos.Elementos;
 import io.cucumber.java.it.Quando;
 import io.cucumber.java.pt.Dado;
@@ -13,7 +9,8 @@ import metodos.Metodos;
 import runner.Executa;
 
 public class AddCustomer {
-    
+
+
 	Metodos metodos = new Metodos();
 	Elementos el = new Elementos();
 	
@@ -69,3 +66,5 @@ public class AddCustomer {
 	}
 
 }
+
+

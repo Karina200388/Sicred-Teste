@@ -1,6 +1,5 @@
 package metodos;
 
-
 import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -43,4 +42,3 @@ public class Metodos extends DriversFactory {
 	
 
 }
-
