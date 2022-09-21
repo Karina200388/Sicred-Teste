@@ -19,11 +19,6 @@ public class AddCustomer {
 	
 	
 	
-	//@After
-	//public void finalizarTeste() {
-		//Executa.fecharNavegador();
-	//}
-	
 	@Dado("que eu acesso o site")
 	public void queEuAcessoOSite() {
 		Executa.abrirNavegador();
